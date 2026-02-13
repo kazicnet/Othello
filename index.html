@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Othello vs Computer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>オセロ（vs コンピュータ）</h1>
+
+      <section class="controls">
+        <label>
+          難易度
+          <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="normal" selected>Normal</option>
+            <option value="hard">Hard</option>
+          </select>
+        </label>
+        <label>
+          あなたの色
+          <select id="humanColor">
+            <option value="1" selected>黒（先手）</option>
+            <option value="-1">白（後手）</option>
+          </select>
+        </label>
+        <button id="newGame">新しいゲーム</button>
+      </section>
+
+      <section class="status" id="statusPanel">
+        <p id="turnLabel">手番: 黒</p>
+        <p id="scoreLabel">黒 2 - 白 2</p>
+        <p id="messageLabel">あなたの手番です。</p>
+      </section>
+
+      <section class="board-wrap">
+        <div id="board" class="board" aria-label="Othello board"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
